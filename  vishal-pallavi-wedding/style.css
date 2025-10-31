@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #fffafc;
+    color: #333;
+    text-align: center;
+}
+
+.hero {
+    background: url('images/hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.container {
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.map-wrap iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photos img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Countdown */
+#countdown {
+    font-size: 1.5em;
+    background: #fdf2f8;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Splash Screen */
+#splash {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out;
+    z-index: 9999;
+}
+#splash.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+.splash-img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1.5s ease;
+}
+.slide-up {
+    animation: slideUp 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideUp {
+    from {transform: translateY(30px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
